@@ -3,11 +3,17 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 import { TicketTable } from '../../components/ticket-table/TicketTable'
 
 import tickets from "../../assets/data/test-tickets.json"
+import { BreadcrumbPage } from '../../components/breadcrumb/Breadcrumb'
 
 
 export const Dashboard = () => {
     return (
         <Container>
+            <Row>
+                <Col>
+                    <BreadcrumbPage page="Dashboard" />
+                </Col>
+            </Row>
             <Row>
                 <Col className="text-center mt-5 mb-2">
                     <Button variant="info" style={{'fontSize':'2rem', 'padding': "10px 30px"}}>Add new Ticket</Button>
