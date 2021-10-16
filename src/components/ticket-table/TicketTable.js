@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Table } from "react-bootstrap"
 
+import PropTypes from 'prop-types'
 
 export const TicketTable = ({tickets}) => {
     return (
@@ -30,4 +31,8 @@ export const TicketTable = ({tickets}) => {
             </tbody>
         </Table>
     )
+}
+
+TicketTable.prototype = {
+    tickets: PropTypes.array.isRequired,
 }
